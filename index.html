@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Botanica — флорариумы, растения и наборы для создания домашнего сада.">
+  <meta name="theme-color" content="#6ea820">
+  <meta property="og:title" content="Botanica — живые композиции">
+  <meta property="og:description" content="Флорариумы, мох и наборы для домашнего сада.">
+  <meta property="og:image" content="assets/terrarium-01.jpg">
+  <title>Botanica — флорариумы и растения</title>
+  <link rel="icon" href="assets/terrarium-01.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="enhancements.css">
+  <link rel="stylesheet" href="fixes.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="topbar shell">
+      <nav class="minor-nav" aria-label="Дополнительная навигация">
+        <a href="#about">Компания</a><a href="#journal">Журнал</a><a href="#contacts">Контакты</a>
+      </nav>
+      <div class="top-actions">
+        <a class="phone" href="tel:+74951234567">+7 495 123-45-67 <span>Контакты</span></a>
+        <button class="button button--green button--small" data-open="callback">Заказать звонок</button>
+      </div>
+    </div>
+    <div class="mainbar shell">
+      <a class="brand" href="#top" aria-label="Botanica, на главную">
+        <span class="brand-mark" aria-hidden="true"><i></i></span>
+        <span><b>BOTANICA</b><small>живые композиции</small></span>
+      </a>
+      <nav class="primary-nav" aria-label="Основная навигация">
+        <div class="shop-menu"><button class="nav-shop" id="shopMenuButton" aria-expanded="false">Магазин <span class="nav-shop-arrow" aria-hidden="true"></span></button><div class="shop-dropdown" id="shopDropdown"><button data-shop-category="all">Все товары <span>50</span></button><button data-shop-category="terrarium">Флорариумы <span>24</span></button><button data-shop-category="plant">Растения и мох <span>14</span></button><button data-shop-category="kit">Наборы «Собери сам» <span>12</span></button></div></div>
+        <a href="#services">Услуги</a>
+        <a href="#about">О нас</a>
+      </nav>
+      <div class="icon-actions">
+        <button class="icon-button" id="themeButton" aria-label="Сменить тему" title="Сменить тему">☾</button>
+        <button class="icon-button" data-open="search" aria-label="Поиск" title="Поиск">⌕</button>
+        <button class="favorite-header" data-open="favorites" aria-label="Избранное" title="Избранное">♡ <span id="favoriteCount">0</span></button>
+        <button class="cart-button" data-open="cart" aria-label="Открыть корзину">Корзина <span id="cartCount">0</span></button>
+        <button class="menu-button" id="menuButton" aria-label="Открыть меню">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow">Домашняя экосистема</p>
+        <h1>Зелёный мир<br>в каждом доме</h1>
+        <p class="hero-lead">Собираем миниатюрные сады вручную и бережно доставляем их новому владельцу.</p>
+        <div class="hero-actions">
+          <a class="button button--green" href="#catalog">В магазин</a>
+          <button class="text-button" data-open="callback">Задать вопрос <span>→</span></button>
+        </div>
+        <div class="hero-stats"><b>140+</b><span>видов растений<br>в нашей коллекции</span><b>6 лет</b><span>создаём живые<br>композиции</span></div>
+      </div>
+      <div class="hero-media">
+        <img src="assets/terrarium-01.jpg" alt="Миниатюрный сад в стеклянной банке">
+        <div class="hero-badge"><span>01</span><p>Авторские<br>композиции</p></div>
+      </div>
+    </section>
+
+    <section class="service-grid shell" id="services">
+      <article class="service-card service-card--dark"><span>01</span><h2>Мастер-классы</h2><p>Соберите свой первый флорариум под руководством мастера.</p><button data-open="callback">Узнать расписание →</button></article>
+      <article class="service-card service-card--image"><img src="assets/terrarium-05.jpg" alt="Флорариум на деревянном столе"><div><span>02</span><h2>Уход и пересадка</h2><p>Возвращаем композициям свежий и ухоженный вид.</p><button data-open="callback">Записаться →</button></div></article>
+      <article class="service-card service-card--lime"><span>03</span><h2>Собери сам</h2><p>Готовые наборы с понятной инструкцией и всем необходимым.</p><button data-shop-category="kit">Выбрать набор →</button></article>
+    </section>
+
+    <section class="catalog-section" id="catalog">
+      <div class="shell">
+        <div class="section-heading"><div><p class="eyebrow">Магазин</p><h2>Каталог</h2></div><p>Живые композиции и материалы<br>для вашего зелёного уголка</p></div>
+
+        <div class="category-strip" id="categoryStrip">
+          <button class="category active" data-category="all"><span class="category-icon">✦</span><b>Все товары</b><small>50 позиций</small></button>
+          <button class="category" data-category="terrarium"><img src="assets/terrarium-02.jpg" alt=""><b>Флорариумы</b><small>24 позиции</small></button>
+          <button class="category" data-category="plant"><img src="assets/terrarium-04.jpg" alt=""><b>Растения и мох</b><small>14 позиций</small></button>
+          <button class="category" data-category="kit"><img src="assets/terrarium-06.jpg" alt=""><b>Наборы</b><small>12 позиций</small></button>
+        </div>
+
+        <div class="catalog-toolbar">
+          <button class="filter-toggle" id="filterToggle">Фильтры <span>2</span></button>
+          <p id="resultCount">Найдено: 8</p>
+          <label>Сортировка
+            <select id="sortSelect"><option value="featured">По популярности</option><option value="asc">Сначала дешевле</option><option value="desc">Сначала дороже</option><option value="name">По названию</option></select>
+          </label>
+        </div>
+
+        <div class="catalog-layout">
+          <aside class="filters" id="filters">
+            <div class="filter-head"><b>Фильтры</b><button id="filterClose" aria-label="Закрыть фильтры">×</button></div>
+            <fieldset><legend>Категория</legend><label><input type="checkbox" value="terrarium" class="filter-category"> Флорариумы</label><label><input type="checkbox" value="plant" class="filter-category"> Растения и мох</label><label><input type="checkbox" value="kit" class="filter-category"> Наборы</label></fieldset>
+            <fieldset><legend>Цена, ₽</legend><div class="price-inputs"><input id="priceMin" type="number" min="0" placeholder="от 0"><input id="priceMax" type="number" min="0" placeholder="до 20000"></div></fieldset>
+            <fieldset><legend>Наличие</legend><label><input type="checkbox" id="stockOnly"> Только в наличии</label></fieldset>
+            <button class="button button--green button--wide" id="applyFilters">Применить</button><button class="reset-button" id="resetFilters">Сбросить всё</button>
+          </aside>
+          <div class="products" id="productGrid" aria-live="polite"></div>
+        </div>
+        <button class="load-more" id="loadMore">Показать ещё <span>↓</span></button>
+      </div>
+    </section>
+
+    <section class="about shell" id="about">
+      <div><p class="eyebrow">Наша философия</p><h2>Маленький сад.<br>Большое спокойствие.</h2></div>
+      <div><p>Мы любим наблюдать, как природа меняется день за днём. Поэтому создаём композиции, за которыми интересно следить и легко ухаживать.</p><p>Каждое растение проходит адаптацию, а каждый заказ получает простую памятку по уходу.</p><button class="text-button" data-open="callback">Познакомиться с нами <span>→</span></button></div>
+    </section>
+
+    <section class="journal shell" id="journal">
+      <div class="section-heading"><div><p class="eyebrow">Полезное</p><h2>Журнал</h2></div><button class="text-button" data-open="journal">Все материалы →</button></div>
+      <div class="journal-grid"><article tabindex="0" role="button" data-article="care"><img src="assets/terrarium-03.jpg" alt="Ростки во флорариуме"><small>УХОД · 8 МИН</small><h3>Как сохранить микроклимат внутри флорариума</h3><span>Читать статью →</span></article><article tabindex="0" role="button" data-article="place"><img src="assets/terrarium-08.jpg" alt="Флорариум в руках"><small>ВДОХНОВЕНИЕ · 5 МИН</small><h3>Где поставить мини-сад, чтобы он радовал каждый день</h3><span>Читать статью →</span></article></div>
+    </section>
+  </main>
+
+  <footer id="contacts">
+    <div class="shell footer-grid">
+      <div><a class="brand brand--footer" href="#top"><span class="brand-mark"><i></i></span><span><b>BOTANICA</b><small>живые композиции</small></span></a><p>Зелёная мастерская<br>в центре Москвы</p></div>
+      <div><h3>Навигация</h3><a href="#catalog">Каталог</a><a href="#services">Услуги</a><a href="#journal">Журнал</a><a href="#about">О нас</a></div>
+      <div><h3>Связаться</h3><a href="tel:+74951234567">+7 495 123-45-67</a><a href="mailto:hello@botanica.example">hello@botanica.example</a><p>Москва, Ботанический переулок, 7</p></div>
+      <form id="subscribeForm"><h3>Новости мастерской</h3><p>Редкие письма о новых растениях и мастер-классах.</p><div><input type="email" placeholder="Ваш e-mail" required><button aria-label="Подписаться">→</button></div><small>Нажимая кнопку, вы соглашаетесь получать рассылку.</small></form>
+    </div>
+    <div class="shell footer-bottom"><span>Демонстрационный проект Botanica, 2026</span><span>Не связан с florariumplants.ru</span></div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="drawer" id="cartDrawer" aria-label="Корзина"><div class="drawer-head"><div><p class="eyebrow">Ваш заказ</p><h2>Корзина</h2></div><button data-close aria-label="Закрыть">×</button></div><div class="delivery-progress"><div><span id="deliveryText">До бесплатной доставки — 7 000 ₽</span><b id="deliveryPercent">0%</b></div><i><span id="deliveryBar"></span></i></div><div id="cartItems" class="cart-items"></div><div class="cart-footer"><p><span>Товары</span><span id="cartSubtotal">0 ₽</span></p><p><span>Доставка</span><span id="cartDelivery">—</span></p><div><span>Итого</span><b id="cartTotal">0 ₽</b></div><button class="button button--green button--wide" id="checkoutButton">Перейти к оформлению</button><small>Оплата на сайте отключена в демо-режиме</small></div></aside>
+  <aside class="drawer" id="favoritesDrawer" aria-label="Избранное"><div class="drawer-head"><div><p class="eyebrow">Сохранённое</p><h2>Избранное</h2></div><button data-close aria-label="Закрыть">×</button></div><div id="favoriteItems" class="cart-items"></div><div class="cart-footer"><button class="button button--green button--wide" id="favoritesToCatalog">Продолжить покупки</button></div></aside>
+  <section class="modal" id="quickModal" role="dialog" aria-modal="true" aria-labelledby="quickTitle"><button class="modal-close" data-close aria-label="Закрыть">×</button><div id="quickContent"></div></section>
+  <section class="modal modal--form" id="callbackModal" role="dialog" aria-modal="true" aria-labelledby="callbackTitle"><button class="modal-close" data-close aria-label="Закрыть">×</button><p class="eyebrow">Обратная связь</p><h2 id="callbackTitle">Перезвоним вам</h2><p>Оставьте номер — свяжемся и ответим на вопросы.</p><form id="callbackForm"><input type="text" placeholder="Ваше имя" required><input type="tel" placeholder="+7 999 000-00-00" required><button class="button button--green button--wide">Отправить</button></form></section>
+  <section class="modal checkout-modal" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle"><button class="modal-close" data-close aria-label="Закрыть">×</button><div class="checkout-head"><p class="eyebrow">Оформление</p><h2 id="checkoutTitle">Получение заказа</h2><div class="checkout-steps"><span class="active">1</span><i></i><span>2</span><i></i><span>3</span></div></div><form id="checkoutForm"><div class="form-grid"><label>Имя<input name="name" required autocomplete="name" placeholder="Алексей"></label><label>Телефон<input name="phone" type="tel" required autocomplete="tel" placeholder="+7 999 000-00-00"></label><label class="span-2">E-mail<input name="email" type="email" required autocomplete="email" placeholder="mail@example.ru"></label></div><fieldset><legend>Способ получения</legend><label class="choice-card"><input type="radio" name="delivery" value="courier" checked><span><b>Курьером по Москве</b><small>Завтра или в удобный день · 490 ₽</small></span></label><label class="choice-card"><input type="radio" name="delivery" value="pickup"><span><b>Самовывоз из мастерской</b><small>Сегодня после 16:00 · бесплатно</small></span></label></fieldset><label class="checkout-comment">Комментарий к заказу<textarea name="comment" rows="3" placeholder="Например, желаемое время доставки"></textarea></label><div class="checkout-summary"><span>К оплате при получении</span><b id="checkoutTotal">0 ₽</b></div><button class="button button--green button--wide">Подтвердить демо-заказ</button><small>Нажимая кнопку, вы принимаете условия демонстрационного оформления.</small></form><div class="order-success" id="orderSuccess"><span>✓</span><h2>Заказ принят</h2><p>Номер <b id="orderNumber"></b> сохранён в этом браузере. В реальном магазине здесь подключается CRM и оплата.</p><button class="button button--green" id="successClose">Вернуться в каталог</button></div></section>
+  <section class="modal article-modal" id="articleModal" role="dialog" aria-modal="true" aria-labelledby="articleTitle"><button class="modal-close" data-close aria-label="Закрыть">×</button><div id="articleContent"></div></section>
+  <section class="modal journal-modal" id="journalModal" role="dialog" aria-modal="true" aria-labelledby="journalModalTitle"><button class="modal-close" data-close aria-label="Закрыть">×</button><p class="eyebrow">Полезное о растениях</p><h2 id="journalModalTitle">Все материалы</h2><div class="journal-library"><button data-article="care"><img src="assets/terrarium-03.jpg" alt=""><small>УХОД · 8 МИН</small><b>Как сохранить микроклимат внутри флорариума</b></button><button data-article="place"><img src="assets/terrarium-08.jpg" alt=""><small>ВДОХНОВЕНИЕ · 5 МИН</small><b>Где поставить мини-сад</b></button><button data-article="watering"><img src="assets/terrarium-04.jpg" alt=""><small>УХОД · 6 МИН</small><b>Как правильно поливать мини-сад</b></button><button data-article="moss"><img src="assets/terrarium-07.jpg" alt=""><small>РАСТЕНИЯ · 7 МИН</small><b>Всё о живом мхе</b></button><button data-article="light"><img src="assets/terrarium-02.jpg" alt=""><small>СОВЕТЫ · 4 МИН</small><b>Сколько света нужно растениям</b></button><button data-article="diy"><img src="assets/terrarium-05.jpg" alt=""><small>МАСТЕР-КЛАСС · 10 МИН</small><b>Собираем флорариум с нуля</b></button></div></section>
+  <section class="search-panel" id="searchPanel" role="dialog" aria-modal="true" aria-label="Поиск"><button data-close aria-label="Закрыть">×</button><label>Поиск по каталогу<input id="searchInput" type="search" placeholder="Например, флорариум…" autocomplete="off"></label><p>Начните вводить название товара</p><div class="search-results" id="searchResults"></div></section>
+  <div class="cookie-banner" id="cookieBanner"><div><b>Мы используем локальное хранилище</b><p>Оно запоминает корзину, избранное и выбранную тему. Никакие данные не отправляются.</p></div><button class="button button--green" id="acceptCookie">Понятно</button></div>
+  <nav class="mobile-dock" aria-label="Мобильная навигация"><a href="#top"><span>⌂</span>Главная</a><a href="#catalog"><span>▦</span>Каталог</a><button data-open="search"><span>⌕</span>Поиск</button><button data-open="favorites"><span>♡</span>Избранное</button><button data-open="cart"><span>♧</span>Корзина</button></nav>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
